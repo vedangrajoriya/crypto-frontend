@@ -10,7 +10,7 @@ interface PredictionResult {
 }
 
 // ML model API endpoint
-const ML_API_URL = import.meta.env.VITE_ML_API_URL 
+const ML_API_URL = 'https://crypto-predictor-xxxxx-uc.a.run.app';
 
 async function getPrediction(date: string): Promise<PredictionResult> { 
   const response = await fetch(`${ML_API_URL}/predict`, {

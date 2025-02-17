@@ -13,7 +13,7 @@ interface PredictionResult {
 // const ML_API_URL = 'https://crypto-predictor-xxxxx-uc.a.run.app';
 
 async function getPrediction(date: string): Promise<PredictionResult> { 
-  const response = await fetch(`http://127.0.0.1:5000/predict`, {
+  const response = await fetch(`https://master.d39ftviw7pcuhp.amplifyapp.com/`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

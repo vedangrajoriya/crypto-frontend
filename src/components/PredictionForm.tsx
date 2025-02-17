@@ -10,10 +10,10 @@ interface PredictionResult {
 }
 
 // ML model API endpoint
-const ML_API_URL = 'https://crypto-predictor-xxxxx-uc.a.run.app';
+// const ML_API_URL = 'https://crypto-predictor-xxxxx-uc.a.run.app';
 
 async function getPrediction(date: string): Promise<PredictionResult> { 
-  const response = await fetch(`${ML_API_URL}/predict`, {
+  const response = await fetch(`http://127.0.0.1:5000/predict`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -112,19 +112,23 @@ export function PredictionForm() {
 
       {predictions && (
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {Object.entries(predictions).map(([coin, price]) => (
-            <div
-              key={coin}
-              className="p-6 bg-black/30 rounded-xl border border-gray-700"
-            >
-              <h3 className="text-lg font-semibold text-gray-200 mb-2">
-                {coin.toUpperCase()}
-              </h3>
-              <p className="text-2xl font-bold text-white">
-                ${Math.round(price).toLocaleString()}
-              </p>
-            </div>
-          ))}
+          {Object.entries(predictions).map(([coin, price]) => {
+            console.log("COIN :- ", coin, "PRICE :- ", price)
+            return (
+              <div
+                key={coin}
+                className="p-6 bg-black/30 rounded-xl border border-gray-700"
+              >
+                <h3 className="text-lg font-semibold text-gray-200 mb-2">
+                  {coin.toUpperCase()}
+                </h3>
+                <p className="text-2xl font-bold text-white">
+                {/* ${price.toFixed(5)} */}
+                  ${Math.round(price).toLocaleString()}
+                </p>
+              </div>
+            )
+          })}
         </div>
       )}
     </div>

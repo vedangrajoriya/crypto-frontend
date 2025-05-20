@@ -44,6 +44,26 @@ Make sure you have the following installed:
 
 ---
 
+🔗 Tech Stack
+React.js – Frontend Framework
+
+Tailwind CSS / Material UI – Styling
+
+Axios – API Requests
+
+Recharts – Data Visualization
+
+React Router – Routing
+
+Supabase (optional) – Real-time subscription support
+
+🤝 Contributors
+👨‍💻 You! Feel free to fork and contribute.
+
+
+📜 License
+This project is licensed under the MIT License – see the LICENSE file for details.
+
 ## 🔧 Installation
 
 ```bash
@@ -64,22 +84,6 @@ npm run dev
 # or
 yarn dev
 
-🔗 Tech Stack
-React.js – Frontend Framework
-
-Tailwind CSS / Material UI – Styling
-
-Axios – API Requests
-
-Recharts – Data Visualization
-
-React Router – Routing
-
-Supabase (optional) – Real-time subscription support
-
-🤝 Contributors
-👨‍💻 You! Feel free to fork and contribute.
 
 
-📜 License
-This project is licensed under the MIT License – see the LICENSE file for details.
+
